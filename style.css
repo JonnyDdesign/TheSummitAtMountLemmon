@@ -6,3 +6,41 @@
 body {
     box-sizing: border-box;
 }
+
+.logo {
+    width: 10%;
+}
+
+nav {
+    margin-left: 50px;
+    padding: 20px 10px 0 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.banner {
+    height: 500px;
+    padding-top: 100px;
+    background-image: url(images/ski.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+h1{
+    color: black;
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin: 0px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  h2{
+    color: #2176FF;
+    margin: 0px;
+    text-align: center;
+    text-transform: uppercase;
+  }
