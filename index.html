@@ -4,25 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Summit at Mount Lemmon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <figure>
-            <img src="images/Logo.png" class="logo" alt="logo">
-        </figure>
-        <nav>
-            <a href="lodge.html">The Lodge</a>
-            <a href="runs.html">Our Ski Runs</a>
-            <a href="directions.html">How to Get Here</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="logo"><img src="images/The Summit Logo.png" alt="The Summit at Mount Lemmon logo"></div>
+            <a href="index.html" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#lodge">The Lodge</a></li>
+                <li><a href="#skiruns">Ski Runs</a></li>
+                <li><a href="#directions">Directions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
     <main class="banner">
-        <h1>Experience</h1>
-        <h2>Mount Lemmon</h2>
-            <a href="#" class="mountain">Get on the mountain</a>
+        <div class="banner-text">
+            <h1>Experience</h1>
+            <h2>Mount Lemmon</h2>
+            <a href="#" class="button">Get on the mountain</a>
         </div>
     </main>
+    <section class="content">
+        <h2>The Experience</h2>
+        <div class="description">
+          <p>
+            The Summit is the geographical center of the the
+            <a href="https://www.fs.usda.gov/recarea/coronado/recarea/?recid=25678">Mount Lemmon</a> Ski Area. 
+            It has a wide variety of terrain, including beginner trails to a full scale halfpipe.
+            The Lowers consist of beginner trails, as well as many
+            intermediate trails mixed with some advanced runs. There are four
+            lifts out of the base area: Lift 1, which services a beginner learning
+            area; Lift 2, which services more advanced beginner terrain, along with
+            intermediate runs; Lift 3, which services all intermediate to advanced trails;
+            Left 4, which services the Playground, our version of play in the snow.
+            The Playground is designed to challenge and riders and allow them to be creative.
+            All chairs require each rider to have their own lift ticket.
+          </p>
+          <p>
+            In 2022, The Summit at Mount Lemmon hosted the first annual Tucson Ski Competition! It was the first
+            local action sports tour with many top athletes in attendance. The Summit continues to
+            host the event annually in the 2nd or 3rd weekend in January.
+            Many of the top athletes in action sports from around the world
+            continue to participate in the Masquerade Ski Tour.
+          </p>
+        </div>
+    </section>
+    <section class="activities-panel">
+        <h2>Activities</h2>
+        <a href="skiing.html" class="activity">Skiing</a>
+        <a href="snowboarding.html" class="activity">Snowboarding</a>
+        <a href="tubing.html" class="activity">Tubing</a>
+        <a href="sledding.html" class="activity">Sledding</a>
+    </section>
+    <footer class="footer">
+        <h3>10300 Ski Run Road, Mt. Lemmon, AZ 85619</h2>
+    </footer>
 </body>
 </html>
