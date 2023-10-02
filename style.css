@@ -1,234 +1,334 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    height: 100px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  height: 100px;
+  width: 100%;
 }
 
 .logo img {
-    width: 25%;
-    padding: .2rem;
-    margin: .5rem;
-  }
+  width: 25%;
+  padding: .2rem;
+  margin: .5rem;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
   
-  .navbar-links ul {
-    display: flex;
-  }
+.navbar-links li {
+  list-style: none;
+}
   
-  .navbar-links li {
-    list-style: none;
-  }
+.navbar-links li a {
+  text-decoration: none;
+  color: #2176FF;
+  padding: 1rem;
+  display: block;
+  font-size: 1.6em;
+  line-height: 25px;
+  text-transform: uppercase;
+  font-family: 'Handlee', Arial, serif;
+}
   
-  .navbar-links li a {
-    text-decoration: none;
-    color: #2176FF;
-    padding: 1rem;
-    display: block;
-    font-size: 1.6em;
-    line-height: 25px;
-    text-transform: uppercase;
-    font-family: 'Tillana', Arial, serif;
-  }
+.navbar-links li:hover {
+  background: #89caf3;
+  border-radius: 10px;
+  transition: 0.5s;
+}
   
-  .navbar-links li:hover {
-    background: #89caf3;
-    border-radius: 10px;
-    transition: 0.5s;
-  }
+.navbar-links li a:hover {
+  color: #ffffff;
+}
   
-  .navbar-links li a:hover {
-    color: #ffffff;
-  }
+.toggle-button {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35px;
+  height: 22px;
+}
   
-  .toggle-button {
-    position: absolute;
-    top: 2rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 35px;
-    height: 22px;
-  }
-  
-  .toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background: #ffffff;
-    border-radius: 10px;
-  }
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background: #000000;
+  border-radius: 10px;
+}
 
 .banner {
-    background-image: url(images/ski.jpg);
-    background-position: center;
-    background-size: cover;
-    border-bottom: 1px solid #dddddd;
-    height: 700px;
-    position: relative;
-    text-align: center;
-    top: 100px;
-    width: 100%;
+  background-image: url(images/ski.jpg);
+  background-position: center;
+  background-size: cover;
+  border-bottom: 1px solid #dddddd;
+  height: 700px;
+  text-align: center;
+  width: 100%;
 }
   
 .banner-text {
-    position: relative;
-    top: 200px;
+  position: relative;
+  top: 200px;
 }
   
 h1 {
-    color: black;
-    font-family: 'Raleway',sans-serif;
-    font-size: 60px;
-    font-weight: 100;
-    letter-spacing: 2px;
-    margin: 0px;
-    text-align: center;
-    text-transform: uppercase;
+  color: black;
+  font-family: 'Raleway',sans-serif;
+  font-size: 60px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin: 0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.directionsh1 {
+  font-size: 3rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 h2 {
-    color: #2176FF;
-    font-family: 'Amatic SC',sans-serif;
-    margin: 0px;
-    text-align: center;
-    text-transform: uppercase;
+  color: #2176FF;
+  font-family: 'Amatic SC',sans-serif;
+  margin: 0px;
+  text-align: center;
+  text-transform: uppercase;
 }
   
 .banner h2 {
-    font-size: 80px;
-    letter-spacing: 10px;
-    margin: -10px 200px 80px 0px;
+  font-size: 80px;
+  letter-spacing: 10px;
+  margin: -10px 200px 80px 0px;
 }
 
 .button {
-    background-color: #2176FF;
-    border-radius: 5px;
-    color: #ffffff;
-    font-family: 'Raleway',sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 14px;
-    text-decoration: none;
-    text-transform: uppercase;
-    cursor: pointer;
+  background-color: #2176FF;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: 'Raleway',sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
 }
   
 .button:hover {
-    background-color: #fff;
-    color: #2176FF;
-    transition: color .1s ease-in, background-color .1s ease-in;
+  background-color: #fff;
+  color: #2176FF;
+  transition: color .1s ease-in, background-color .1s ease-in;
 }
     
 .button:active {
-    font-size: 18px;
-    transition: font-size .1s ease-in-out;
+  font-size: 18px;
+  transition: font-size .1s ease-in-out;
 }
 
 .content {
-    background-image: url('https://content.codecademy.com/courses/learn-links-and-buttons/project/mountain1.jpg');
-    background-position: center top;
-    background-size: cover;
-    border-bottom: 1px solid #eeeeee;
-    margin: 0 auto;
-    overflow-y: auto;
-    padding: 80px 0px;
-    position: relative;
-    text-align: center;
+  background-image: url('https://content.codecademy.com/courses/learn-links-and-buttons/project/mountain1.jpg');
+  background-position: center top;
+  background-size: cover;
+  border-bottom: 1px solid #eeeeee;
+  margin: 0 auto;
+  overflow-y: auto;
+  padding: 80px 0px;
+  position: relative;
+  text-align: center;
 }
   
 .content h2 {
-    font-size: 40px;
+  font-size: 40px;
 }
   
 .content p {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 p {
-    color: #000000;
-    font-family: 'Raleway',sans-serif;
-    font-size: 18px;
-    line-height: 42px;
-    text-align: left;
+  color: #000000;
+  font-family: 'Raleway',sans-serif;
+  font-size: 18px;
+  line-height: 42px;
+  text-align: left;
 }
   
 .description {
-    display: inline-block;
-    width: 70%;
+  display: inline-block;
+  width: 70%;
 }
 
 .activities-panel {
-    padding: 80px 0px;
-    text-align: center;
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: center;
+  padding: 80px 0px;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .activities-panel h2 {
-    width: 100%;
-    font-size: 40px;
-    margin-bottom: 20px;
+  width: 100%;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
 .activity {
-    background-color: #2176FF;
-    box-sizing: border-box;
-    width: 220px;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-family: 'Amatic SC',sans-serif;
-    font-size: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 10px;
-    border: 1px solid black;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 30px;
+  background-color: #2176FF;
+  box-sizing: border-box;
+  width: 220px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Amatic SC',sans-serif;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 30px;
 }
 
 .activity:hover {
-    background-color: #fff;
-    color: #5495ff;
-    transition: color .1s ease-in, background-color .1s ease-in;
+  background-color: #fff;
+  color: #5495ff;
+  transition: color .1s ease-in, background-color .1s ease-in;
 }
     
 .activity:active {
-    font-size: 40px;
-    transition: font-size .1s;
+  font-size: 40px;
+  transition: font-size .1s;
 }
   
 .footer {
-    background-color: #2176FF;
-    padding: 30px;
-    text-align: center;
+  padding: 5px;
+  background-color: #2176FF;
+  text-align: center;
 }
   
 .footer h3 {
-    color: #ffffff;
-    font-family: 'Raleway',sans-serif;
-    font-size: 16px;
-    font-weight: 100;
-    letter-spacing: 2px;
+  color: #ffffff;
+  font-family: 'Raleway',sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+/*Google Maps styling*/
+.google-map {
+  padding-bottom: 50%;
+  position: relative;
+}
+
+.google-map iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+@media (min-width: 375px) and (max-width: 480px) {
+  .toggle-button {
+    display: flex;
+  }
+  
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100px;
+  }
+  
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .navbar-links li {
+    text-align: center;
+  }
+  
+  .navbar-links li a {
+    padding: .5rem 1rem;
+    font-size: 1.2em;
+    line-height: 1;
+  }
+  
+  .navbar-links.active {
+    display: flex;
+    background: #000000;
+  }
+  
+  .logo img {
+    width: 25%;
+    margin: .2rem;
+    padding: .2rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .toggle-button {
+    display: flex;
+  }
+  
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100px;
+  }
+  
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .navbar-links li {
+    text-align: center;
+  }
+  
+  .navbar-links li a {
+    padding: .5rem 1rem;
+  }
+  
+  .navbar-links.active {
+    display: flex;
+    background: #000000;
+  }
+  
+  .logo img {
+    width: 20%;
+    margin: .2rem;
+    padding: .2rem;
+  }
 }
