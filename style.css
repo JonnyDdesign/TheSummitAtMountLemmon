@@ -317,6 +317,55 @@ p {
   letter-spacing: 2px;
 }
 
+.contact-container {
+  width: 100%;
+  height: 100vh;
+  background: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  background: #2176FF;
+  display: flex;
+  flex-direction: column;
+  padding: 3vw 4vw;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 30px;
+}
+
+form h2 {
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+form input, form textarea {
+  border: 0;
+  margin: 10px 0;
+  padding: 20px;
+  outline: none;
+  background: #ffffff;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+form button {
+  padding: 15px;
+  background: lightblue;
+  color: #000000;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 200px;
+  margin: 20px auto 0;
+  border-radius: 30px;
+}
+
 /*Google Maps styling*/
 .google-map {
   padding-bottom: 50%;
