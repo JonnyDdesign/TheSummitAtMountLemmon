@@ -212,6 +212,10 @@ h2 {
   padding: 80px 0px;
 }
 
+.content h2 {
+  font-size: 60px;
+}
+
 .lodge-content h2 {
   font-size: 60px;
 }
@@ -233,10 +237,6 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-}
-  
-.content h2 {
-  font-size: 60px;
 }
   
 .content p {
@@ -380,7 +380,7 @@ form button {
   position: absolute;
 }
 
-@media (min-width: 375px) and (max-width: 480px) {
+@media screen and (min-width: 375px) and (max-width: 480px) {
   .toggle-button {
     display: flex;
   }
@@ -421,9 +421,141 @@ form button {
     margin: .2rem;
     padding: .2rem;
   }
+
+  .banner {
+    height: 300px;
+  }
+  
+  .lodge-banner {
+    height: 300px;
+  }
+  
+  .skiing-banner {
+    height: 300px;
+  }
+  
+  .snowboarding-banner {
+    height: 300px;
+  }
+  
+  .tubing-banner {
+    height: 300px;
+  }
+
+  .banner-text {
+    position: relative;
+    top: 30px;
+  }
+    
+  h1 {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  .directionsh1 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+    
+  .banner h2 {
+    font-size: 24px;
+    letter-spacing: 5px;
+    margin: 10px 200px 80px 0px;
+  }
+
+  .button {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 12px;
+  }
+
+  .content {
+    background-image: url(images/mountain\ background.png);
+    background-size: 90%;
+    margin-left: 20px;
+    padding: 30px 0px;
+    text-align: left;
+  }
+  
+  .lodge-content {
+    background-image: url(images/Lodging\ Background.png);
+    text-align: center;
+    padding: 80px 0px;
+  }
+  
+  .skiing-content {
+    background-image: url(images/Skiing\ Background.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 80px 0px;
+  }
+  
+  .snowboarding-content {
+    background-image: url(images/Snowboarding\ Background.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 80px 0px;
+  }
+  
+  .tubing-content {
+    background-image: url(images/Tubing\ Background.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 80px 0px;
+  }
+
+  .content h2 {
+    font-size: 32px;
+  }
+  
+  .lodge-content h2 {
+    font-size: 32px;
+  }
+  
+  .skiing-content h2 {
+    font-size: 32px;
+  }
+  
+  .snowboarding-content h2 {
+    font-size: 32px;
+  }
+  
+  .tubing-content h2 {
+    font-size: 32px;
+  }
+
+  .content p {
+    margin-top: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .description {
+    display: inline-block;
+    width: 90%;
+  }
+
+  .activities-panel {
+    padding: 40px 0px;
+  }
+  
+  .activities-panel h2 {
+    font-size: 30px;
+  }
+
+  .activity {
+    width: 150px;
+    height: 150px;
+    font-size: 26px;
+    letter-spacing: 1.5px;
+  }
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media screen and (min-width: 481px) and (max-width: 767px) {
   .toggle-button {
     display: flex;
   }
@@ -461,5 +593,137 @@ form button {
     width: 20%;
     margin: .2rem;
     padding: .2rem;
+  }
+
+  .banner {
+    height: 300px;
+  }
+  
+  .lodge-banner {
+    height: 300px;
+  }
+  
+  .skiing-banner {
+    height: 300px;
+  }
+  
+  .snowboarding-banner {
+    height: 300px;
+  }
+  
+  .tubing-banner {
+    height: 300px;
+  }
+
+  .banner-text {
+    position: relative;
+    top: 30px;
+  }
+    
+  h1 {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  .directionsh1 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+    
+  .banner h2 {
+    font-size: 24px;
+    letter-spacing: 5px;
+    margin: 10px 200px 80px 0px;
+  }
+
+  .button {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 12px;
+  }
+
+  .content {
+    background-image: url(images/mountain\ background.png);
+    background-size: 90%;
+    margin-left: 20px;
+    padding: 30px 0px;
+    text-align: left;
+  }
+  
+  .lodge-content {
+    background-image: url(images/Lodging\ Background.png);
+    text-align: center;
+    padding: 80px 0px;
+  }
+  
+  .skiing-content {
+    background-image: url(images/Skiing\ Background.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 80px 0px;
+  }
+  
+  .snowboarding-content {
+    background-image: url(images/Snowboarding\ Background.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 80px 0px;
+  }
+  
+  .tubing-content {
+    background-image: url(images/Tubing\ Background.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 80px 0px;
+  }
+
+  .content h2 {
+    font-size: 32px;
+  }
+  
+  .lodge-content h2 {
+    font-size: 32px;
+  }
+  
+  .skiing-content h2 {
+    font-size: 32px;
+  }
+  
+  .snowboarding-content h2 {
+    font-size: 32px;
+  }
+  
+  .tubing-content h2 {
+    font-size: 32px;
+  }
+
+  .content p {
+    margin-top: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .description {
+    display: inline-block;
+    width: 90%;
+  }
+
+  .activities-panel {
+    padding: 40px 0px;
+  }
+  
+  .activities-panel h2 {
+    font-size: 30px;
+  }
+
+  .activity {
+    width: 150px;
+    height: 150px;
+    font-size: 26px;
+    letter-spacing: 1.5px;
   }
 }
