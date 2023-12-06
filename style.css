@@ -7,70 +7,151 @@ body {
   padding: 0;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  height: 100px;
-  width: 100%;
+
+/*Navbar styling*/
+.container {
+  width: 95%;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
-.logo img {
-  width: 25%;
-  padding: .2rem;
-  margin: .5rem;
+header {
+  background: #ffffff;
+  padding: 0.5em 0;
+  position: relative;
 }
 
-.navbar-links ul {
+header::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+header img {
+  width: 10%;
+}
+
+.primary-navigation {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background: #2176FF;
+  transition: clip-path ease-in-out 0.8s;
   margin: 0;
   padding: 0;
-  display: flex;
-}
-  
-.navbar-links li {
   list-style: none;
-}
-  
-.navbar-links li a {
-  text-decoration: none;
-  color: #2176FF;
-  padding: 1rem;
-  display: block;
-  font-size: 1.6em;
-  line-height: 25px;
-  text-transform: uppercase;
-  font-family: 'Handlee', Arial, serif;
-}
-  
-.navbar-links li:hover {
-  background: #89caf3;
-  border-radius: 10px;
-  transition: 0.5s;
-}
-  
-.navbar-links li a:hover {
-  color: #ffffff;
-}
-  
-.toggle-button {
-  position: absolute;
-  top: 2rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 35px;
-  height: 22px;
-}
-  
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background: #000000;
-  border-radius: 10px;
+  z-index: 2;
 }
 
+.primary-navigation[data-state="opened"] {
+  animation: clipPathCircleOpen 0.8s ease-in-out forwards;
+  display: block;
+}
+
+.primary-navigation[data-state="closing"] {
+  animation: clipPathCircleClose 0.8s ease-in-out forwards;
+}
+.primary-navigation[data-state="closed"] {
+  display: none;
+}
+
+@keyframes clipPathCircleOpen {
+  0% { clip-path: circle(0% at top right); }
+  100% { clip-path: circle(300% at top right); }
+}
+@keyframes clipPathCircleClose {
+  0% { clip-path: circle(300% at top right); }
+  100% { clip-path: circle(0% at top right); }
+}
+
+.site-nav li {
+  border-bottom: 1px solid #ffffff;
+}
+
+.site-nav li:last-child {
+  border-bottom: none;
+}
+
+.site-nav a {
+  color: #ffffff;
+  display: block;
+  padding: 2em 4em 2em 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background: #DE8921;
+  color: #000000;
+}
+
+.site-nav--icon {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-right: 1em;
+  width: 1.1em;
+  text-align: right;
+  color: #ffffff;
+}
+
+.menu-toggle {
+  padding: 1em;
+  background: transparent;
+  border: 0;
+  position: absolute;
+  top: 4em;
+  right: 1em;
+  cursor: pointer;
+}
+
+.menu-toggle:focus-visible {
+  outline: 4px solid #DE8921;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  background: #2176FF;
+  height: 3.5px;
+  width: 2em;
+  border-radius: 3px;
+  transition: all ease-in-out 0.3s;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+[aria-expanded="true"] .hamburger {
+  transform: rotate(45deg);
+}
+
+[aria-expanded="true"] .hamburger::before {
+  opacity: 0;
+}
+
+[aria-expanded="true"] .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/*Banner stylings*/
 .banner {
   background-image: url(images/ski.jpg);
   background-position: center;
@@ -116,7 +197,8 @@ body {
   position: relative;
   top: 200px;
 }
-  
+ 
+/*Header text stylings*/
 h1 {
   color: black;
   font-family: 'Kaushan Script', cursive;
@@ -150,6 +232,7 @@ h2 {
   margin: 20px 500px 80px 0px;
 }
 
+/*Button styling*/
 .button {
   background-color: #2176FF;
   border-radius: 5px;
@@ -174,6 +257,7 @@ h2 {
   transition: font-size .1s ease-in-out;
 }
 
+/*Content styling*/
 .content {
   background-image: url(images/mountain\ background.png);
   background-position: center top;
@@ -187,8 +271,13 @@ h2 {
 
 .lodge-content {
   background-image: url(images/Lodging\ Background.png);
-  text-align: center;
+  background-position: center top;
+  background-size: cover;
+  margin: 0 auto;
+  overflow-y: auto;
   padding: 80px 0px;
+  position: relative;
+  text-align: center;
 }
 
 .skiing-content {
@@ -256,6 +345,7 @@ p {
   width: 70%;
 }
 
+/*Activities styling*/
 .activities-panel {
   padding: 80px 0px;
   text-align: center;
@@ -302,7 +392,8 @@ p {
   font-size: 40px;
   transition: font-size .1s;
 }
-  
+
+/*Footer styling*/
 .footer {
   padding: 5px;
   background-color: #2176FF;
@@ -317,10 +408,11 @@ p {
   letter-spacing: 2px;
 }
 
+/*Contact page styling*/
 .contact-container {
   width: 100%;
   height: 100vh;
-  background: lightblue;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -349,6 +441,7 @@ form input, form textarea {
   padding: 20px;
   outline: none;
   background: #ffffff;
+  font-family: 'Raleway',sans-serif;
   font-size: 16px;
   border-radius: 10px;
 }
@@ -357,6 +450,7 @@ form button {
   padding: 15px;
   background: lightblue;
   color: #000000;
+  font-family: 'Raleway',sans-serif;
   font-size: 18px;
   border: 0;
   outline: none;
@@ -380,46 +474,16 @@ form button {
   position: absolute;
 }
 
-@media screen and (min-width: 375px) and (max-width: 480px) {
-  .toggle-button {
-    display: flex;
+/*Mobile styling*/
+@media screen and (min-width: 365px) and (max-width: 480px) {
+  header img {
+    width: 20%;
   }
-  
-  .navbar-links {
-    display: none;
-    width: 100%;
-  }
-  
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    height: 100px;
-  }
-  
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
-  
-  .navbar-links li {
-    text-align: center;
-  }
-  
-  .navbar-links li a {
-    padding: .5rem 1rem;
-    font-size: 1.2em;
-    line-height: 1;
-  }
-  
-  .navbar-links.active {
-    display: flex;
-    background: #000000;
-  }
-  
-  .logo img {
-    width: 25%;
-    margin: .2rem;
-    padding: .2rem;
+
+  .menu-toggle {
+    padding: 1em;
+    top: 2.5em;
+    right: 1em;
   }
 
   .banner {
@@ -471,38 +535,53 @@ form button {
   }
 
   .content {
-    background-image: url(images/mountain\ background.png);
     background-size: 90%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     margin-left: 20px;
     padding: 30px 0px;
     text-align: left;
   }
   
   .lodge-content {
-    background-image: url(images/Lodging\ Background.png);
-    text-align: center;
-    padding: 80px 0px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 20px;
+    padding: 30px 0px;
+    text-align: left;
   }
   
   .skiing-content {
-    background-image: url(images/Skiing\ Background.png);
+    background-size: 90%;
     background-repeat: no-repeat;
-    text-align: center;
-    padding: 80px 0px;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 20px;
+    padding: 30px 0px;
+    text-align: left;
   }
   
   .snowboarding-content {
-    background-image: url(images/Snowboarding\ Background.png);
+    background-size: 90%;
     background-repeat: no-repeat;
-    text-align: center;
-    padding: 80px 0px;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 20px;
+    padding: 30px 0px;
+    text-align: left;
   }
   
   .tubing-content {
-    background-image: url(images/Tubing\ Background.png);
+    background-size: 90%;
     background-repeat: no-repeat;
-    text-align: center;
-    padding: 80px 0px;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 20px;
+    padding: 30px 0px;
+    text-align: left;
   }
 
   .content h2 {
@@ -555,44 +634,22 @@ form button {
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 767px) {
-  .toggle-button {
-    display: flex;
+/*Tablet styling*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    background: #ffffff;
+    padding: 0 0;
+    position: relative;
   }
-  
-  .navbar-links {
-    display: none;
-    width: 100%;
+
+  header img {
+    width: 15%;
   }
-  
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    height: 100px;
-  }
-  
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
-  
-  .navbar-links li {
-    text-align: center;
-  }
-  
-  .navbar-links li a {
-    padding: .5rem 1rem;
-  }
-  
-  .navbar-links.active {
-    display: flex;
-    background: #000000;
-  }
-  
-  .logo img {
-    width: 20%;
-    margin: .2rem;
-    padding: .2rem;
+
+  .menu-toggle {
+    padding: 1em;
+    top: 2.5em;
+    right: 1em;
   }
 
   .banner {
@@ -644,38 +701,53 @@ form button {
   }
 
   .content {
-    background-image: url(images/mountain\ background.png);
     background-size: 90%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     margin-left: 20px;
     padding: 30px 0px;
     text-align: left;
   }
   
   .lodge-content {
-    background-image: url(images/Lodging\ Background.png);
-    text-align: center;
-    padding: 80px 0px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 20px;
+    padding: 30px 0px;
+    text-align: left;
   }
   
   .skiing-content {
-    background-image: url(images/Skiing\ Background.png);
+    background-size: 90%;
     background-repeat: no-repeat;
-    text-align: center;
-    padding: 80px 0px;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 20px;
+    padding: 30px 0px;
+    text-align: left;
   }
   
   .snowboarding-content {
-    background-image: url(images/Snowboarding\ Background.png);
+    background-size: 90%;
     background-repeat: no-repeat;
-    text-align: center;
-    padding: 80px 0px;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 20px;
+    padding: 30px 0px;
+    text-align: left;
   }
   
   .tubing-content {
-    background-image: url(images/Tubing\ Background.png);
+    background-size: 90%;
     background-repeat: no-repeat;
-    text-align: center;
-    padding: 80px 0px;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 20px;
+    padding: 30px 0px;
+    text-align: left;
   }
 
   .content h2 {
@@ -725,5 +797,206 @@ form button {
     height: 150px;
     font-size: 26px;
     letter-spacing: 1.5px;
+  }
+}
+
+/*Tablet styling*/
+@media screen and (min-width: 965px) {
+  header {
+    background: #ffffff;
+    padding: 0 0;
+    position: relative;
+  }
+
+  header img {
+    width: 13%;
+  }
+
+  .primary-navigation[data-state="closed"] {
+    display: inline-flex;
+  }
+
+  .primary-navigation {
+    top: 30%;
+    right: 1em;
+    background: transparent;
+  }
+
+  .site-nav a {
+    font-size: 18px;
+    padding: 1em;
+    color: #2176FF;
+  }
+
+  .site-nav--icon {
+    font-size: 0.9em;
+    margin-right: 0.9em;
+    width: 1em;
+    color: #2176FF;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .banner {
+    height: 500px;
+  }
+  
+  .lodge-banner {
+    height: 500px;
+  }
+  
+  .skiing-banner {
+    height: 500px;
+  }
+  
+  .snowboarding-banner {
+    height: 500px;
+  }
+  
+  .tubing-banner {
+    height: 500px;
+  }
+
+  .banner-text {
+    position: relative;
+    top: 30px;
+  }
+    
+  h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-right: 350px;
+  }
+
+  .directionsh1 {
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+    
+  .banner h2 {
+    font-size: 32px;
+    letter-spacing: 5px;
+    margin: 10px 400px 100px 0px;
+  }
+
+  .button {
+    font-size: 20px;
+    font-weight: 300;
+    padding: 12px;
+  }
+  
+  .lodge-content {
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 80px;
+    padding: 30px 0px;
+    text-align: left;
+  }
+  
+  .skiing-content {
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 80px;
+    padding: 30px 0px;
+    text-align: left;
+  }
+  
+  .snowboarding-content {
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 80px;
+    padding: 30px 0px;
+    text-align: left;
+  }
+  
+  .tubing-content {
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 80px;
+    padding: 30px 0px;
+    text-align: left;
+  }
+
+  .content h2 {
+    font-size: 40px;
+  }
+  
+  .lodge-content h2 {
+    font-size: 40px;
+  }
+  
+  .skiing-content h2 {
+    font-size: 40px;
+  }
+  
+  .snowboarding-content h2 {
+    font-size: 40px;
+  }
+  
+  .tubing-content h2 {
+    font-size: 40px;
+  }
+
+  .content p {
+    margin-top: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .description {
+    display: inline-block;
+    width: 90%;
+  }
+
+  .activities-panel {
+    padding: 40px 0px;
+  }
+  
+  .activities-panel h2 {
+    font-size: 40px;
+  }
+
+  .activity {
+    width: 250px;
+    height: 200px;
+    font-size: 32px;
+    letter-spacing: 1.5px;
+  }
+}
+
+/*Tablet styling*/
+@media screen and (min-width: 1180px) {
+  header {
+    background: #ffffff;
+    padding: 0 0;
+    position: relative;
+  }
+
+  header img {
+    width: 11%;
+  }
+
+  .primary-navigation[data-state="closed"] {
+    display: inline-flex;
+  }
+
+  .primary-navigation {
+    top: 35%;
+    right: 1em;
+    background: transparent;
   }
 }

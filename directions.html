@@ -9,25 +9,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/ccc6ace57d.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo"><a href="index.html"><img src="images/The Summit Logo.png" alt="The Summit at Mount Lemmon logo"></a></div>
-            <a href="#" class="toggle-button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
-        <div class="navbar-links">
-            <ul>
-                <li><a href="lodge.html">The Lodge</a></li>
-                <li><a href="skiing.html">Ski Runs</a></li>
-                <li><a href="directions.html">Directions</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    <header>
+        <div class="container">
+            <a href="index.html"><img class="logo" src="images/The Summit Logo.png" alt="The Summit at Mount Lemmon Logo"></a>
+            <nav class="site-nav">
+                <button class="menu-toggle" 
+                    aria-controls="primary-navigation"
+                    aria-expanded="false">
+                    <span class="visually-hidden">Menu</span>
+                    <div class="hamburger" aria-hidden="true"></div>
+                </button>
+                <ul data-state="closed" class="primary-navigation" id="primary-navigation">
+                    <li><a href="index.html"><i class="fa fa-home site-nav--icon"></i>Home</a></li>
+                    <li><a href="lodge.html"><i class="fa fa-bed site-nav--icon"></i>The Lodge</a></li>
+                    <li><a href="skiing.html"><i class="fa fa-person-skiing site-nav--icon"></i>Ski Runs</a></li>
+                    <li><a href="directions.html"><i class="fa fa-map-location-dot site-nav--icon"></i>Directions</a></li>
+                    <li><a href="contact.html"><i class="fa fa-envelope site-nav--icon"></i>Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
     <main>
         <h1 class="directionsh1">Directions to The Summit at Mount Lemmon</h1>
         <div class="google-map">
